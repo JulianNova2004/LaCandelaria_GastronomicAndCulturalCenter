@@ -51,13 +51,14 @@
 
 .referente__quote {
   border-left: 2px solid var(--c-sage);
-  padding-left: var(--space-2);
+  padding-left: var(--space-3);
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
   color: var(--color-cream);
   margin-top: var(--space-2);
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .referente__divider {

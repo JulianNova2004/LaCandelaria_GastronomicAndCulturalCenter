@@ -1,5 +1,11 @@
 import './Propuesta.css';
 
+// IMÁGENES 5, 6 y 7 · PLANTAS DE LOS TRES PISOS                 
+
+const PISO_01_IMAGE = 'AxonometriaPrimerPiso.png'; 
+const PISO_02_IMAGE = 'AxonometriaSegundoPiso.png'; 
+const PISO_03_IMAGE = 'AxonometriaTercerPiso.png'; 
+
 const pisos = [
   {
     n: '01',
@@ -7,7 +13,8 @@ const pisos = [
     horario: 'Activación diurna',
     descripcion:
       'Espejo de agua central acristalado por seguridad, con abertura que conecta con el patio interior. Alrededor del vacío se distribuye un pasillo de exposiciones de arte urbano que activa la fachada y genera flujo peatonal constante durante el horario diurno.',
-    chips: ['Espejo de agua', 'Pasillo expositivo', 'Activa fachada']
+    chips: ['Espejo de agua', 'Pasillo expositivo', 'Activa fachada'],
+    imagen: PISO_01_IMAGE
   },
   {
     n: '02',
@@ -15,7 +22,8 @@ const pisos = [
     horario: 'Emprendedores del barrio',
     descripcion:
       'Espacio de doble altura con vacío central destinado a una feria comercial orientada a emprendedores y pequeños empresarios. Funciona como punto de emprendimiento para la comunidad (artistas emergentes, moda sostenible), generando ingresos propios para el equipamiento.',
-    chips: ['Pequeños empresarios', 'Moda sostenible', 'Artistas emergentes']
+    chips: ['Pequeños empresarios', 'Moda sostenible', 'Artistas emergentes'],
+    imagen: PISO_02_IMAGE
   },
   {
     n: '03',
@@ -23,7 +31,8 @@ const pisos = [
     horario: 'Activación nocturna',
     descripcion:
       'Nivel con vacío central y cocina lateral que contempla una oferta de gastronomía local bogotana. El componente genera una fuente considerable de ingresos y aporta a la activación en horarios nocturnos, cuando la inseguridad percibida del barrio aumenta.',
-    chips: ['Doble altura', 'Cocina perimetral', 'Terraza interior']
+    chips: ['Doble altura', 'Cocina perimetral', 'Terraza interior'],
+    imagen: PISO_03_IMAGE
   }
 ];
 
@@ -85,12 +94,22 @@ export default function Propuesta() {
                   ))}
                 </ul>
               </div>
-              <div className="piso__visual placeholder">
-                <span className="placeholder__label">[PLANTA PISO {p.n}]</span>
-                <span className="placeholder__hint">
-                  Plano arquitectónico o axonometría
-                </span>
-              </div>
+              {p.imagen ? (
+                <figure className="framed-image piso__visual">
+                  <img
+                    src={p.imagen}
+                    alt={`Planta arquitectónica del piso ${p.n}`}
+                    loading="lazy"
+                  />
+                </figure>
+              ) : (
+                <div className="piso__visual placeholder">
+                  <span className="placeholder__label">[PLANTA PISO {p.n}]</span>
+                  <span className="placeholder__hint">
+                    Plano arquitectónico o axonometría
+                  </span>
+                </div>
+              )}
             </article>
           ))}
         </div>

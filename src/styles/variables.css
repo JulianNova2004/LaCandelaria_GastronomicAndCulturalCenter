@@ -5,6 +5,9 @@
   --c-copper: #9D6638;      /* acento primario / terracota */
   --c-coffee: #4E220F;      /* tinta / fondo oscuro */
 
+  /* Acento adicional: vinotinto para contraste sobre fondos cálidos */
+  --c-vino: #8B1E3A;
+
   /* Tokens derivados */
   --color-bg: #F7F1DE;
   --color-bg-alt: #EDE6CC;

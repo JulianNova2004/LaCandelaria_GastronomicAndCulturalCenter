@@ -21,7 +21,7 @@
 .footer__brand-mark {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: clamp(1.4rem, 1.1rem + 0.8vw, 1.85rem);
+  font-size: clamp(1.55rem, 1.2rem + 0.95vw, 2.05rem);
   color: var(--c-sage);
   line-height: 1;
 }
@@ -35,11 +35,11 @@
 .footer__pregunta {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--fs-xs);
-  color: rgba(247, 241, 222, 0.62);
+  font-size: var(--fs-sm);
+  color: rgba(247, 241, 222, 0.7);
   line-height: 1.6;
   border-left: 2px solid var(--c-sage);
-  padding-left: var(--space-2);
+  padding-left: var(--space-3);
   margin-top: var(--space-2);
   max-width: 52ch;
 }

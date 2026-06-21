@@ -1,9 +1,7 @@
 import './Hero.css';
 
-// Para mostrar el render del predio en el Hero, pega aquí la ruta de la imagen.
-// Por ejemplo: HERO_IMAGE = '/assets/render-hero.jpg'
-// La imagen ocupará todo el fondo del Hero (full-bleed, object-fit cover).
-const HERO_IMAGE = '';
+//IMAGEN 1 · RENDER DE LA PROPUESTA (5379 × 3400)               
+const HERO_IMAGE = '/AxonometriaPropuesta.png';
 
 export default function Hero() {
   return (
@@ -30,7 +28,7 @@ export default function Hero() {
       <div className="hero__content container">
         <div className="hero__eyebrow reveal">
           <span className="hero__eyebrow-line" />
-          <span>Taller Internacional Italia en Perspectiva 2026 · Mesa 1</span>
+          <span>Taller Internacional Italia en Perspectiva 2026 · Mesa 1 - Grupo 1</span>
         </div>
 
         <h1 className="hero__title reveal">

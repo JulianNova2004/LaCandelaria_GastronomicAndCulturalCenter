@@ -1,5 +1,10 @@
 import './Referente.css';
 
+
+//IMAGEN 4 · MUSEO DI ROMA IN TRASTEVERE (1240 × 500)           
+
+const MUSEO_IMAGE = '/MuseoDiRomaTrastevere.jpg';
+
 export default function Referente() {
   return (
     <section id="referente" className="section section--dark referente">
@@ -58,13 +63,23 @@ export default function Referente() {
         </div>
 
         <div className="referente__museo reveal">
-          <div className="placeholder referente__museo-image">
-            <span className="placeholder__label">[MUSEO DI ROMA · TRASTEVERE]</span>
-            <span className="placeholder__hint">
-              Antiguo convento de Sant'Egidio (s. XVII), restaurado 1969-1972,
-              renovado en 2000 como hub cultural
-            </span>
-          </div>
+          {MUSEO_IMAGE ? (
+            <figure className="framed-image referente__museo-image referente__museo-image--photo">
+              <img
+                src={MUSEO_IMAGE}
+                alt="Museo di Roma in Trastevere, antiguo convento de Sant'Egidio"
+                loading="lazy"
+              />
+            </figure>
+          ) : (
+            <div className="placeholder referente__museo-image">
+              <span className="placeholder__label">[MUSEO DI ROMA · TRASTEVERE]</span>
+              <span className="placeholder__hint">
+                Antiguo convento de Sant'Egidio (s. XVII), restaurado 1969-1972,
+                renovado en 2000 como hub cultural
+              </span>
+            </div>
+          )}
           <div>
             <h4>Museo di Roma in Trastevere: el precedente programático</h4>
             <p>

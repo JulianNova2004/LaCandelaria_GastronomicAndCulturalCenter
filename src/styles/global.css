@@ -109,11 +109,16 @@ li { margin-bottom: var(--space-1); font-size: var(--fs-sm); }
 .section__lead {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--fs-base);
+  font-size: var(--fs-lg);
   color: var(--color-ink-soft);
   max-width: 60ch;
   margin-bottom: var(--space-4);
-  line-height: 1.55;
+  line-height: 1.5;
+}
+
+/* Énfasis inline (em / i): leve aumento para resaltar dentro del texto base */
+em, i {
+  font-size: 1.06em;
 }
 
 .eyebrow {
@@ -200,6 +205,9 @@ li { margin-bottom: var(--space-1); font-size: var(--fs-sm); }
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+  margin: 0;
+  min-height: 0;
+  display: block;
 }
 
 .framed-image img {
