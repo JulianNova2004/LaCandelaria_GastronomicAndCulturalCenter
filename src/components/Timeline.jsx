@@ -17,7 +17,7 @@ const hitos = [
     fase: 'Fase 03',
     titulo: 'Definición de la propuesta',
     detalle:
-      'Programa mixto de tres pisos articulado por un patio central acristalado. Galería de arte urbano, feria comercial para emprendedores y gastronomía local bogotana.'
+      'Programa mixto de tres niveles articulado por un patio central acristalado. Galería de arte urbano, feria comercial para emprendedores y gastronomía local bogotana.'
   },
   {
     fase: 'Fase 04',

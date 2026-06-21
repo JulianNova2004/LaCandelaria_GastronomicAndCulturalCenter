@@ -61,7 +61,7 @@ export default function Propuesta() {
         <header className="reveal">
           <span className="section__label">03 · La propuesta</span>
           <h2 className="section__title">
-            Tres pisos, un vacío vertical, una lógica de permanencia
+            Tres niveles, un vacío vertical, una lógica de permanencia
           </h2>
           <p className="section__lead">
             Un programa mixto de usos articulado por un patio central acristalado
@@ -79,7 +79,7 @@ export default function Propuesta() {
               style={{ transitionDelay: `${i * 80}ms` }}
             >
               <div className="piso__num">
-                <span className="piso__num-prefix">Piso</span>
+                <span className="piso__num-prefix">Nivel</span>
                 <span className="piso__num-value">{p.n}</span>
               </div>
               <div className="piso__body">
