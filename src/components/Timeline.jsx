@@ -45,7 +45,7 @@ export default function Timeline() {
           <p className="section__lead">
             La ruta conceptual del proyecto, del diagnóstico al <em>First Briefing</em>.
             Cada fase aporta una capa específica al documento integrado entregado por
-            el grupo 1 de la Mesa 1.
+            el Grupo 1 de la Mesa 1.
           </p>
         </header>
 
