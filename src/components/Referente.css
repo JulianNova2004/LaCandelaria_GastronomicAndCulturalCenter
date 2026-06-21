@@ -1,0 +1,191 @@
+.referente {
+  position: relative;
+  overflow: hidden;
+}
+
+.referente::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(176, 186, 153, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.referente__label { color: var(--c-sage); }
+.referente__label::before { background: var(--c-sage); }
+
+.referente__title { color: var(--color-cream); }
+
+.referente__grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  align-items: stretch;
+}
+
+.referente__col {
+  padding: var(--space-3);
+  background: rgba(247, 241, 222, 0.04);
+  border: 1px solid rgba(247, 241, 222, 0.15);
+  border-radius: var(--radius-lg);
+}
+
+.referente__col p {
+  color: rgba(247, 241, 222, 0.88);
+  max-width: none;
+}
+
+.referente__col-title {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-sage);
+  margin-bottom: var(--space-2);
+}
+
+.referente__quote {
+  border-left: 2px solid var(--c-sage);
+  padding-left: var(--space-2);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--fs-base);
+  color: var(--color-cream);
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+.referente__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--c-sage);
+  position: relative;
+  min-width: 40px;
+}
+
+.referente__divider::before,
+.referente__divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: calc(50% - 28px);
+  background: rgba(176, 186, 153, 0.4);
+}
+
+.referente__divider::before { top: 0; }
+.referente__divider::after { bottom: 0; }
+
+.referente__divider span {
+  background: var(--color-night);
+  padding: 0 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.referente__inversion {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(135deg, rgba(157, 102, 56, 0.22) 0%, rgba(176, 186, 153, 0.12) 100%);
+  border-left: 3px solid var(--c-copper);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.referente__inversion-label {
+  color: var(--c-sage);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.referente__inversion p {
+  font-family: var(--font-serif);
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  color: var(--color-cream);
+  margin: 0;
+  max-width: none;
+}
+
+.referente__inversion-strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--c-copper);
+  text-decoration-thickness: 2px;
+  color: rgba(247, 241, 222, 0.5);
+}
+
+.referente__inversion strong {
+  color: var(--c-sage);
+  font-weight: 600;
+}
+
+.referente__museo {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Placeholder oscuro coherente con la sección */
+.referente__museo-image.placeholder {
+  min-height: 240px;
+  background: rgba(247, 241, 222, 0.06);
+  border-color: rgba(247, 241, 222, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.referente__museo-image.placeholder::before {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(247, 241, 222, 0.04),
+      rgba(247, 241, 222, 0.04) 10px,
+      rgba(247, 241, 222, 0.08) 10px,
+      rgba(247, 241, 222, 0.08) 20px
+    );
+  border: 1px dashed rgba(247, 241, 222, 0.28);
+}
+
+.referente__museo-image.placeholder > * {
+  background: var(--color-night);
+}
+
+.referente__museo-image .placeholder__label { color: var(--c-sage); }
+.referente__museo-image .placeholder__hint { color: rgba(247, 241, 222, 0.65); }
+
+.referente__museo h4 { color: var(--color-cream); }
+
+.referente__museo p {
+  color: rgba(247, 241, 222, 0.85);
+  margin-bottom: 0;
+  max-width: none;
+}
+
+@media (max-width: 860px) {
+  .referente__grid { grid-template-columns: 1fr; }
+  .referente__divider {
+    padding: var(--space-2) 0;
+    flex-direction: row;
+    min-height: 24px;
+  }
+  .referente__divider::before, .referente__divider::after {
+    width: calc(50% - 28px);
+    height: 1px;
+    left: 0; top: 50%; bottom: auto;
+  }
+  .referente__divider::after { left: auto; right: 0; }
+  .referente__museo { grid-template-columns: 1fr; gap: var(--space-3); }
+}
+
+@media (max-width: 480px) {
+  .referente__inversion { padding: var(--space-2) var(--space-3); }
+}

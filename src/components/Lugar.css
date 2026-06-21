@@ -1,0 +1,106 @@
+.lugar { background: var(--color-paper); }
+
+.lugar__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  margin-top: var(--space-4);
+}
+
+.lugar__visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lugar__photo { min-height: 320px; }
+.lugar__photo--small { min-height: 180px; }
+
+.lugar__facts {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: var(--space-3);
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-terracotta);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.lugar__fact {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: var(--space-2);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-line);
+  align-items: baseline;
+}
+
+.lugar__fact:last-child { border-bottom: none; }
+
+.lugar__fact dt {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.lugar__fact dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-base);
+  color: var(--color-ink);
+  line-height: 1.4;
+}
+
+.lugar__norms {
+  margin-top: var(--space-5);
+  padding: var(--space-3);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.lugar__norms h3 {
+  grid-column: 1 / -1;
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.lugar__norms ul { margin: 0; padding-left: 1.1rem; }
+
+.lugar__norms li {
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-1);
+}
+
+.lugar__note {
+  margin: 0;
+  font-style: italic;
+  font-family: var(--font-serif);
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+  border-left: 2px solid var(--c-sage);
+  padding-left: var(--space-2);
+}
+
+@media (max-width: 860px) {
+  .lugar__grid { grid-template-columns: 1fr; }
+  .lugar__norms { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  .lugar__fact { grid-template-columns: 1fr; gap: 0.1rem; padding: 0.5rem 0; }
+  .lugar__photo { min-height: 240px; }
+  .lugar__photo--small { min-height: 160px; }
+}

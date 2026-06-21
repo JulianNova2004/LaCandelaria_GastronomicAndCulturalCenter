@@ -1,0 +1,205 @@
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-7) 0 var(--space-5);
+  overflow: hidden;
+  color: var(--color-cream);
+  isolation: isolate;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero__bg-art {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(176, 186, 153, 0.18), transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(157, 102, 56, 0.35), transparent 60%),
+    linear-gradient(135deg, #4E220F 0%, #6B3A22 45%, #9D6638 100%);
+}
+
+.hero__bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(78, 34, 15, 0.20) 0%, rgba(78, 34, 15, 0.55) 55%, rgba(78, 34, 15, 0.95) 100%);
+}
+
+/* Indicador visible de la zona reservada para el render del predio.
+   Solo aparece cuando HERO_IMAGE está vacío. */
+.hero__render-frame {
+  position: absolute;
+  inset: 5%;
+  border: 2px dashed rgba(247, 241, 222, 0.32);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.hero__render-frame::before,
+.hero__render-frame::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(247, 241, 222, 0.55);
+}
+
+.hero__render-frame::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.hero__render-frame::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.hero__render-frame-tag {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 222, 0.85);
+  background: rgba(78, 34, 15, 0.7);
+  padding: 0.4rem 0.85rem;
+  border-radius: 2px;
+}
+
+.hero__render-frame-spec {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: rgba(247, 241, 222, 0.6);
+  background: rgba(78, 34, 15, 0.55);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+
+.hero__content { position: relative; z-index: 1; }
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-sage);
+  margin-bottom: var(--space-3);
+}
+
+.hero__eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: var(--c-sage);
+}
+
+.hero__title {
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  margin-bottom: var(--space-3);
+  max-width: 24ch;
+}
+
+.hero__title-italic {
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem);
+  color: var(--c-sage);
+  line-height: 1;
+}
+
+.hero__title-main {
+  font-size: var(--fs-hero);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--color-cream);
+}
+
+.hero__lead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(0.98rem, 0.9rem + 0.5vw, 1.2rem);
+  line-height: 1.55;
+  color: rgba(247, 241, 222, 0.92);
+  max-width: 52ch;
+  margin-bottom: var(--space-4);
+}
+
+.hero__meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(247, 241, 222, 0.22);
+  max-width: 680px;
+  margin-bottom: var(--space-4);
+}
+
+.hero__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: var(--fs-sm);
+  color: var(--color-cream);
+}
+
+.hero__meta-item .eyebrow { color: var(--c-sage); }
+
+.hero__scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-cream);
+  border-bottom: none;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__scroll svg { animation: heroArrow 2.4s var(--ease) infinite; }
+
+@keyframes heroArrow {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+@media (max-width: 720px) {
+  .hero { min-height: 78vh; padding-top: var(--space-6); padding-bottom: var(--space-4); }
+  .hero__meta { grid-template-columns: 1fr 1fr; gap: var(--space-2); }
+  .hero__render-frame { inset: 4%; }
+  .hero__render-frame-tag { font-size: 0.65rem; padding: 0.3rem 0.6rem; }
+  .hero__render-frame-spec { font-size: 0.6rem; }
+}
+
+@media (max-width: 480px) {
+  .hero__meta { grid-template-columns: 1fr; }
+}

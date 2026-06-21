@@ -1,0 +1,111 @@
+.equipo__grupos {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.grupo {
+  padding: var(--space-3);
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+
+.grupo:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.grupo__head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-line);
+  margin-bottom: var(--space-2);
+}
+
+.grupo__num {
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-terracotta);
+  line-height: 1;
+}
+
+.grupo__carrera {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+.grupo__count {
+  font-family: var(--font-sans);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.grupo__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.persona {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  margin: 0;
+  transition: border-color var(--dur) var(--ease);
+}
+
+.persona:hover { border-color: var(--c-sage); }
+
+.persona__inicial {
+  flex: 0 0 32px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--c-sage), var(--color-bg-alt));
+  color: var(--color-terracotta-deep);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50%;
+  border: 1px solid var(--color-line);
+}
+
+.persona__nombre {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+@media (max-width: 960px) {
+  .equipo__grupos { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .grupo__lista { grid-template-columns: 1fr; }
+  .grupo__head { grid-template-columns: auto 1fr; }
+  .grupo__count { grid-column: 1 / -1; }
+}

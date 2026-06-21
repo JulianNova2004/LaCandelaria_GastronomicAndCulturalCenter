@@ -1,0 +1,61 @@
+:root {
+  /* Paleta oficial — 4 tonos */
+  --c-cream: #F7F1DE;       /* fondo claro */
+  --c-sage: #B0BA99;        /* acento secundario */
+  --c-copper: #9D6638;      /* acento primario / terracota */
+  --c-coffee: #4E220F;      /* tinta / fondo oscuro */
+
+  /* Tokens derivados */
+  --color-bg: #F7F1DE;
+  --color-bg-alt: #EDE6CC;
+  --color-paper: #FCF8E9;
+  --color-ink: #4E220F;
+  --color-ink-soft: #6B3A22;
+  --color-muted: #8A6B58;
+  --color-line: #DDD2B5;
+
+  --color-terracotta: #9D6638;
+  --color-terracotta-deep: #4E220F;
+  --color-accent: #B0BA99;
+  --color-accent-deep: #7C8868;
+  --color-stone: #B8AB91;
+  --color-cream: #F7F1DE;
+  --color-night: #4E220F;
+
+  /* Tipografía */
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Escala tipográfica fluida (reducida) */
+  --fs-xs: clamp(0.72rem, 0.68rem + 0.15vw, 0.8rem);
+  --fs-sm: clamp(0.82rem, 0.78rem + 0.15vw, 0.9rem);
+  --fs-base: clamp(0.95rem, 0.9rem + 0.2vw, 1.02rem);
+  --fs-lg: clamp(1.02rem, 0.95rem + 0.3vw, 1.18rem);
+  --fs-xl: clamp(1.18rem, 1.05rem + 0.5vw, 1.45rem);
+  --fs-2xl: clamp(1.35rem, 1.15rem + 0.8vw, 1.75rem);
+  --fs-3xl: clamp(1.55rem, 1.25rem + 1.2vw, 2.1rem);
+  --fs-hero: clamp(1.75rem, 1.3rem + 2vw, 2.85rem);
+
+  /* Espaciado */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+  --space-8: 8rem;
+
+  /* Layout */
+  --max-w: 1240px;
+  --max-w-text: 68ch;
+  --radius: 4px;
+  --radius-lg: 10px;
+
+  /* Sombras y transiciones */
+  --shadow-sm: 0 1px 2px rgba(78, 34, 15, 0.06);
+  --shadow-md: 0 6px 18px rgba(78, 34, 15, 0.08);
+  --shadow-lg: 0 18px 48px rgba(78, 34, 15, 0.14);
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 400ms;
+}
