@@ -3,13 +3,9 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './Mapa.css';
 
-// ╔════════════════════════════════════════════════════════════════╗
-// ║  POLÍGONO DE LA CANDELARIA                                     ║
-// ║  Coloca el archivo en /public/la-candelaria.json               ║
-// ║  Soporta formato Esri (geometry.rings) o GeoJSON estándar      ║
-// ║  (geometry.coordinates / FeatureCollection / Polygon).         ║
-// ║  Si el archivo no existe o falla, usa el polígono aproximado.  ║
-// ╚════════════════════════════════════════════════════════════════╝
+
+// ║  POLÍGONO DE LA CANDELARIA con info en GeoJSON                                   ║
+
 const GEOJSON_URL = '/la-candelaria.json';
 
 const PREDIO = [4.60056, -74.07694];
