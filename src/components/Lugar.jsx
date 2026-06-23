@@ -99,7 +99,7 @@ export default function Lugar() {
               menos de siete cuadras a la redonda con la vida popular del barrio.
             </p>
             <div className="lugar__entorno-list-wrap">
-              <span className="lugar__entorno-list-label">Equipamientos en el collage</span>
+              <span className="lugar__entorno-list-label">Equipamientos cercanos</span>
               <ul className="lugar__entorno-list">
                 <li><span className="lugar__entorno-list-pin" aria-hidden="true" />Plaza de Bolívar</li>
                 <li><span className="lugar__entorno-list-pin" aria-hidden="true" />Teatro Colón</li>
