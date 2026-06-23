@@ -35,7 +35,7 @@ export default function Footer() {
             <h4>Universidad</h4>
             <p>
               Universidad Piloto de Colombia<br />
-              Facultad <span className="footer__pending">[OJOOOOO FACULTADES]</span><br />
+              Facultad <span className="footer__pending">Arquitectura y Artes, Ciencias Sociales y Empresariales e Ingeniería</span><br />
               Programas <span className="footer__pending">Arquitectura, Diseño Gráfico, Marketing, Ingeniería Civil, Ingeniería de Sistemas</span>
             </p>
           </div>
